@@ -1,0 +1,71 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en" ng-app>
+    <head>
+        <meta charset="utf-8">
+        <title>Google Phone Gallery</title>
+        <link rel="stylesheet" href="~/Content/app.css">
+        <link rel="stylesheet" href="~/Content/bootstrap.css">
+        <script src="~/Scripts/angular.js"></script>
+        <script src="~/Scripts/controllers.js"></script>
+    </head>
+    <body ng-controller="PhoneListCtrl">
+
+        <div class="container-fluid">
+            <div class="row-fluid">
+                <div class="span2">
+                    <!--Sidebar content-->
+
+                    Search: <input ng-model="query">
+                            Sort by:
+                            <select ng-model="orderProp">
+                                <option value="name">Alphabetical</option>
+                                <option value="age">Newest</option>
+                            </select>
+
+                </div>
+                <div class="span10">
+                    <!--Body content-->
+
+                    <ul class="phones">
+                        <li ng-repeat="phone in phones | filter:query | orderBy:orderProp">
+                            {{phone.name}}
+                            <p>{{phone.snippet}}</p>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
+@{
+    /*
+     The MIT License
+
+Copyright (c) 2010-2012 Google, Inc. http://angularjs.org
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.
+ 
+     */
+}
