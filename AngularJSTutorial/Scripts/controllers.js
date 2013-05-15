@@ -13,8 +13,14 @@ function PhoneListCtrl($scope, $http) {
 function PhoneDetailCtrl($scope, $routeParams, $http) {
     $http.get('api/phones/' + $routeParams.phoneId).success(function (data) {
         $scope.phone = data;
+        $scope.mainImageUrl = data.images[0];
     });
+
+    $scope.setImage = function(imageUrl) {
+        $scope.mainImageUrl = imageUrl;
+    };
 }
+
 //PhoneListCtrl.$inject = ['$scope', '$http'];
 
 /*
