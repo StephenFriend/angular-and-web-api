@@ -3,6 +3,8 @@
 ## Overview
 Builds on the AngularJS tutorial http://docs.angularjs.org/tutorial and puts it on top of ASP.Net's Web API.  Each commit is a self-contained step that demonstrates some aspect of how to get the original code working with the Web API.
 
+Blog posts that work go through the code at: http://stevefriend.blogspot.co.uk/2013/05/angularjs-tutorial-and-net-web-api-part.html
+
 ## Prerequisites
 
 ### The original AngularJS Phone Catalog Tutorial Application
