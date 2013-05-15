@@ -6,5 +6,6 @@ namespace AngularJSTutorial.DataAccess
     public interface IPhoneRepository
     {
         IEnumerable<Phone> GetAll();
+        PhoneDetail GetBy(string id);
     }
 }

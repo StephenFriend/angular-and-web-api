@@ -117,6 +117,7 @@
     </Compile>
     <Compile Include="Infrastructure\SimpleResolver.cs" />
     <Compile Include="Models\Phone.cs" />
+    <Compile Include="Models\PhoneDetail.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

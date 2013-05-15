@@ -18,5 +18,10 @@ namespace AngularJSTutorial.Controllers
         {
             return this.phoneRepo.GetAll();
         }
+
+        public PhoneDetail GetPhoneBy(string id)
+        {
+            return this.phoneRepo.GetBy(id);
+        } 
     }
 }
